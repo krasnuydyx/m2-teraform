@@ -27,7 +27,8 @@ resource "aws_elasticache_subnet_group" "mage-vpc-redis-sbgr" {
   name       = "mage-vpc-redis-sbgr"
   subnet_ids = ["${aws_subnet.Private-1a.id}", "${aws_subnet.Private-1b.id}"]
 }
-
+/*
 output "Redis Cluster address" {
     value = "${aws_elasticache_replication_group.mage-vpc-redis-rg.primary_endpoint_address}"
 }
+*/

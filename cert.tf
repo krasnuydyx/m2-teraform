@@ -28,7 +28,7 @@ resource "tls_self_signed_cert" "web-cert" {
       "digital_signature",
       "server_auth",
   ]
-  #dns_names = ["vf-cm-uat-emea.ecg.magento.com", "www.vf-cm-uat-emea.ecg.magento.com"]
+  #dns_names = ["sampledomain.com", "www.sampledomain.com"]
   subject {
       common_name  = "${aws_alb.alb-web.dns_name}"
       organization = "Your Inc"

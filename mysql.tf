@@ -26,6 +26,7 @@ resource "aws_db_instance" "mage-vpc-db" {
         TechOwnerEmail = "your_email@your_domain"
     }
 }
+/*
 resource "aws_db_instance" "mage-vpc-db-replica" {
 	replicate_source_db = "${aws_db_instance.mage-vpc-db.identifier}"
 	instance_class = "db.t2.small"
@@ -46,6 +47,7 @@ resource "aws_db_instance" "mage-vpc-db-replica" {
         TechOwnerEmail = "your_email@your_domain"
     }
 }
+*/
 resource "aws_db_parameter_group" "mage-vpc-rds-param" {
 	name   = "mage-vpc-rds-param"
 	family = "mysql5.7"
@@ -58,6 +60,8 @@ resource "aws_db_subnet_group" "mage-vpc-rds-subnetgroup" {
 	name = "mage-vpc-rds-subnetgroup"
 	subnet_ids = ["${aws_subnet.Private-1a.id}", "${aws_subnet.Private-1b.id}"]
 }
+/*
 output "RDS address" {
 	value = "${aws_db_instance.mage-vpc-db.endpoint}"
 }
+*/

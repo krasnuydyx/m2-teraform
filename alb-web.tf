@@ -93,9 +93,6 @@ resource "aws_alb_target_group" "alb-web-ssh-tg" {
   }
 }
 
-output "Web ELB address" {
-    value = "${aws_alb.alb-web.dns_name}"
-}
-output "SSH ELB address" {
+output "SSH address" {
     value = "${aws_alb.alb-web-ssh.dns_name}"
 }

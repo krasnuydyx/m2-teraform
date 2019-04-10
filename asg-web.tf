@@ -100,12 +100,6 @@ data "template_file" "installation_template" {
   }
 }
 
-data "aws_instances" "instance-web" {
-	depends_on = ["aws_autoscaling_group.asg-web"]
-	instance_tags {
-		Name = "mage-web"
-	}
-}
-output "Web intance private-ip" {
-  value = "${data.aws_instances.instance-web.private_ips}"
+output "MAGENTO_BASE_URL" {
+  value = "http://${aws_alb.alb-web.dns_name}/"
 }
