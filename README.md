@@ -1,6 +1,7 @@
 # Terraform as code for AWS Magento Infrastructure
 
 Software url: https://www.terraform.io
+Magento Wiki: https://wiki.corp.magento.com/display/ECGX/Terraform+as+code+for+Magento+Infrastructure
 
 This project use user_data with template_file to install magento app
 
